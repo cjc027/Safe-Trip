@@ -45,11 +45,18 @@ export default function SignUpPage(props) {
     <>
       <Grid textAlign="center" style={{ height: "100vh" }} verticalAlign="middle">
       <Grid.Column style={{ maxWidth: 450 }}>
-        <Header as="h2" color="teal" textAlign="center">
+        <Header as="h2" color="blue" textAlign="center">
           Sign Up
         </Header>
         <Form autoComplete="off" onSubmit={handleSubmit}>
           <Segment stacked>
+            <Form.Input
+              name="username"
+              placeholder="Username"
+              value={state.username}
+              onChange={handleChange}
+              required
+            />
             <Form.Input
               name="fullName"
               placeholder="Full name"
@@ -105,7 +112,7 @@ export default function SignUpPage(props) {
                 required
               />
             </Form.Field>
-            <Button type="submit" className="btn">
+            <Button type="submit" color='blue' className="btn">
               Signup
             </Button>
           </Segment>
