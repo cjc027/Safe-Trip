@@ -6,7 +6,7 @@ const MAPS_KEY = process.env.REACT_APP_GOOGLE_KEY
 
 function LocationDetails({ location }) {
   return (
-    <Card style={{minWidth: '380px'}} centered raised>
+    <Card style={{minWidth: '350px'}} centered raised>
       <Card.Header as="h3" style={{ paddingTop: "10px" }}>
         {location.name}
       </Card.Header>
