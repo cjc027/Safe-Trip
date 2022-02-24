@@ -19,11 +19,11 @@ export default function AddContactForm({user, handleAddContact, form, toggleForm
     function handleSubmit(e){
         e.preventDefault()
 
-        const formatNumber = state.phoneNumber.replace(/-/g, "")
-        setState({
-            ...state,
-            phoneNumber: formatNumber
-        })
+        // const formatNumber = state.phoneNumber.replace(/-/g, "")
+        // setState({
+        //     ...state,
+        //     phoneNumber: formatNumber
+        // })
 
         handleAddContact(state)
         setState({
