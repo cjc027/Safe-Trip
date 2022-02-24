@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { Header, Segment, Menu, Dropdown, Icon } from "semantic-ui-react";
 
 export default function PageHeader({ user, handleLogout }){
-    console.log('Header log')
+    console.log(user, '<- user in the header component')
 
     return (
         <Segment clearing>
