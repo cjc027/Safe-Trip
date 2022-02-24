@@ -7,4 +7,4 @@ const contactSchema = mongoose.Schema({
     phoneNumber: String
 });
 
-module.exports = mongoose.Model('Contact', contactSchema);
+module.exports = mongoose.model('Contact', contactSchema);

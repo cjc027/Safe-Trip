@@ -1,13 +1,16 @@
 import tokenService from "./tokenService"
 
-const BASE_URL = '/api/locations/'
+const BASE_URL = '/api/locations/';
 
 export function create(location){
+    // console.log('locationAPI being hit')
+    // console.log(location, 'location form data in locationAPI')
     return fetch(BASE_URL, {
         method: 'POST',
         body: JSON.stringify(location),
         headers: {
-			'Authorization': 'Bearer ' + tokenService.getToken()
+			'Authorization': 'Bearer ' + tokenService.getToken(),
+            'Content-Type': 'application/json'
 		}
     }).then(res => {
         if (res.ok) return res.json();

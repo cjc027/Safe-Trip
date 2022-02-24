@@ -9,9 +9,8 @@ export default function AddLocationForm({
     toggleForm
 }){
 
-
+// removed user from state
     const [state, setState] = useState({
-        user: user._id,
         name: "",
         street: "",
         city: "",
