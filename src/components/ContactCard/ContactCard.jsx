@@ -13,17 +13,22 @@ function ContactCard({ contact, user }) {
 
   return (
     <Card key={contact._id} raised>
-      <Card.Header as="h3" style={{paddingTop: '10px'}}>{contact.fullName}</Card.Header>
+      <Card.Header as="h3" style={{ paddingTop: "10px" }}>
+        {contact.fullName}
+        <Link style={{color: 'inherit'}} to="/">
+            <Icon name="edit" style={{paddingLeft: "20px"}}/>
+        </Link>
+      </Card.Header>
       <Card.Content extra>
-        <div style={{display: 'grid', gridTemplateColumns: '1fr 1fr'}}>
-          <a href={`tel:${contact.phoneNumber}`} >
-            <Button basic color="green" style={{width: '95%'}}>
-                Call
+        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr" }}>
+          <a href={`tel:${contact.phoneNumber}`}>
+            <Button basic color="green" style={{ width: "95%" }}>
+              Call
             </Button>
           </a>
           <a href={`mailto:${contact.email}`}>
-            <Button basic color="red" style={{width: '95%'}}>
-                Email
+            <Button basic color="red" style={{ width: "95%" }}>
+              Email
             </Button>
           </a>
         </div>

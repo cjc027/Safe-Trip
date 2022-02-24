@@ -35,7 +35,7 @@ export default function Index({ user, handleLogout }) {
   async function getLocations() {
     try {
       const data = await locationAPI.getAll();
-      console.log(data, "this is data from getLocation");
+      console.log(data, "this is data from getLocations");
       setLocations([...data.locations]);
     } catch(err) {
       console.log(err.message, "<- getLocations error message");

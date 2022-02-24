@@ -29,3 +29,14 @@ export function getAll(){
     })
 }
 
+
+export function getOne(locationId){
+    return fetch(BASE_URL + locationId, {
+        headers: {
+			'Authorization': 'Bearer ' + tokenService.getToken()
+		}
+    }).then(res => {
+        if(res.ok) return res.json()
+        throw new Error('Location not found!')
+    })
+}

@@ -5,6 +5,7 @@ import "./App.css";
 import SignupPage from "../SignupPage/SignupPage";
 import LoginPage from "../LoginPage/LoginPage";
 import Index from "../Index/Index";
+import Location from "../Location/Location";
 import Profile from "../Profile/Profile";
 import userService from "../../utils/userService";
 
@@ -28,6 +29,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Index user={user} handleLogout={handleLogout} />} />
         <Route path="/:username" element={<Profile user={user} handleLogout={handleLogout} />} />
+        <Route path="/:username/:locationId" element={<Location user={user} handleLogout={handleLogout} />} />
         <Route
           path="/login"
           element={<LoginPage handleSignUpOrLogin={handleSignUpOrLogin} />}
