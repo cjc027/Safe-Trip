@@ -20,7 +20,7 @@ function UberCard({ location, user }) {
               To Location
             </Button>
           </a>
-          <a href={`https://m.uber.com/ul/?action=setPickup&client_id=${UBER}&pickup=my_location&dropoff%5Bnickname%5D=Home&dropoff%5Blatitude%5D=${location.latitude}&dropoff%5Blongitude%5D=${location.longitude}`}>
+          <a href={`https://m.uber.com/ul/?action=setPickup&client_id=${UBER}&pickup=my_location&dropoff%5Bnickname%5D=Home&dropoff%5Blatitude%5D=${user.latitude}&dropoff%5Blongitude%5D=${user.longitude}`}>
             <Button basic color="green" style={{ width: "95%" }}>
               Go Home
             </Button>
