@@ -6,11 +6,14 @@ import ErrorMessage from "../../components/ErrorMessage/ErrorMessage";
 import * as locationAPI from "../../utils/locationAPI";
 
 import { Grid } from "semantic-ui-react";
+import { useNavigate } from "react-router-dom";
 
 export default function Index({ user, handleLogout }) {
   const [locations, setLocations] = useState([]);
   const [form, setForm] = useState(false);
   const [error, setError] = useState("");
+
+  const navigate = useNavigate();
 
   function toggleForm(){
     setForm(true);

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import Header from "../../components/Header/Header";
 import ErrorMessage from "../../components/ErrorMessage/ErrorMessage";
+import ContactIndex from "../../components/ContactIndex/ContactIndex";
 import AddContact from "../../components/AddContact/AddContact";
 import * as contactAPI from "../../utils/contactAPI";
 
@@ -93,6 +94,11 @@ export default function Profile(props) {
             <h2>Profile Page</h2>
           </Grid.Column>
         </Grid.Row>
+        <Grid.Row>
+        <Grid.Column textAlign="center" style={{ maxWidth: 450 }}>
+          <ContactIndex contacts={contacts} user={user} />
+        </Grid.Column>
+      </Grid.Row>
         <Grid.Row>
         <Grid.Column textAlign="center" style={{ maxWidth: 437 }}>
           <AddContact user={user} form={form} handleAddContact={handleAddContact} toggleForm={toggleForm} />

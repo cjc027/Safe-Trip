@@ -28,6 +28,14 @@
   color: #61dafb;
 }
 
+.ui.cards>.card {
+  margin: 0.5rem;
+}
+
+body {
+  background-color: rgb(199, 212, 218);
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
