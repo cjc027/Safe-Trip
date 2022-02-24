@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import Header from "../../components/Header/Header";
 import ContactIndex from "../../components/ContactIndex/ContactIndex";
 import ErrorMessage from "../../components/ErrorMessage/ErrorMessage";
+import LocationDetails from "../../components/LocationDetails/LocationDetails";
 import * as locationAPI from "../../utils/locationAPI";
 
 import { Grid } from "semantic-ui-react";
@@ -39,17 +40,6 @@ export default function Location(props) {
     }
   }
 
-  // async function getContacts(){
-  //   try {
-  //     const data = await contactAPI.getAll();
-  //     console.log(data, "<- data from getContacts");
-  //     setContacts([...data.contacts]);
-  //   } catch(err) {
-  //     console.log(err.message, "<-getContacts error message");
-  //     setError(err.message);
-  //   }
-  // }
-
   useEffect(()=>{
     getProfile();
     getLocation();
@@ -78,6 +68,11 @@ export default function Location(props) {
       <Grid.Row>
         <Grid.Column>
           <Header handleLogout={props.handleLogout} user={props.user} />
+        </Grid.Column>
+      </Grid.Row>
+      <Grid.Row>
+        <Grid.Column textAlign="center" style={{ maxWidth: 450 }}>
+          <LocationDetails location={location} />
         </Grid.Column>
       </Grid.Row>
       <Grid.Row>
