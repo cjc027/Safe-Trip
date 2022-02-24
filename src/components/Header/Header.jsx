@@ -15,7 +15,7 @@ export default function PageHeader({ user, handleLogout }){
             <Menu floated="left">
                 <Dropdown item text="Dashboard" simple>
                     <Dropdown.Menu>
-                        <Dropdown.Item as={Link} to="/profile" text='Profile' />
+                        <Dropdown.Item as={Link} to={`/${user.username}`} text='Profile' />
                         <Dropdown.Item as={Link} to="/" text="Saved Locations" />
                         <Dropdown.Item>
                             <a href="" target={'_blank'}>Go Home</a>
