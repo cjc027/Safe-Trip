@@ -3,7 +3,8 @@ const Location = require('../models/location');
 module.exports = {
     create,
     index,
-    details
+    details,
+    deleteOne
 }
 
 async function create(req, res){
@@ -37,5 +38,15 @@ async function details(req, res){
         res.status(200).json({location: location});
     } catch(err) {
         res.status(400).json({err});
+    }
+}
+
+async function deleteOne(req, res){
+    try {
+        const location = await Location.findOneAndDelete({_id: req.params.locationId})
+        res.status(200).json({location: location})
+    } catch(err) {
+        console.log(err, 'inside deleteOne Ctrl function');
+        res.status(400).json({err})
     }
 }

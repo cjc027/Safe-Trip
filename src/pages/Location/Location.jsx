@@ -7,8 +7,10 @@ import LocationDetails from "../../components/LocationDetails/LocationDetails";
 import UberCard from "../../components/UberCard/UberCard";
 import * as locationAPI from "../../utils/locationAPI";
 
-import { Grid } from "semantic-ui-react";
+import { useNavigate } from "react-router-dom";
+import { Grid, Button } from "semantic-ui-react";
 import userService from "../../utils/userService";
+
 
 export default function Location(props) {
   const [location, setLocation] = useState({});
@@ -17,6 +19,8 @@ export default function Location(props) {
   const [error, setError] = useState("");
 
   const { username, locationId } = useParams();
+
+  const navigate = useNavigate();
 
   async function getProfile() {
     try {
@@ -38,6 +42,17 @@ export default function Location(props) {
     } catch(err) {
       console.log(err);
       setError("Could not retrieve location!");
+    }
+  }
+
+  async function handleDelete(){
+    try {
+      const data = await locationAPI.deleteOne(locationId);
+      console.log(data, "deleted location")
+      navigate('/');
+    } catch(err) {
+      console.log(err);
+      setError("An error occured when trying to delete location!")
     }
   }
 
@@ -84,6 +99,14 @@ export default function Location(props) {
       <Grid.Row>
         <Grid.Column textAlign="center" style={{ maxWidth: 450 }}>
           <ContactIndex contacts={contacts} user={user} />
+        </Grid.Column>
+      </Grid.Row>
+      <Grid.Row>
+        <Grid.Column textAlign="center" style={{ maxWidth: 450 }}>
+          <br />
+          <Button onClick={handleDelete} negative>
+            Delete Location
+          </Button>
         </Grid.Column>
       </Grid.Row>
     </Grid>

@@ -5,6 +5,6 @@ const locationsCtrl = require('../../controllers/locations');
 router.post('/', locationsCtrl.create);
 router.get('/', locationsCtrl.index);
 router.get('/:locationId', locationsCtrl.details);
-// router.delete('/:id', locationsCtrl.deleteOne);
+router.delete('/:locationId', locationsCtrl.deleteOne);
 
 module.exports = router;

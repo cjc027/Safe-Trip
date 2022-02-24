@@ -40,3 +40,15 @@ export function getOne(locationId){
         throw new Error('Location not found!')
     })
 }
+
+export function deleteOne(locationId){
+    return fetch(BASE_URL + locationId, {
+        method: 'DELETE',
+        headers: {
+			'Authorization': 'Bearer ' + tokenService.getToken()
+		}
+    }).then(res => {
+        if (res.ok) return res.json();
+        throw new Error('Error deleting the location. Check the express terminal!')
+    })
+}
