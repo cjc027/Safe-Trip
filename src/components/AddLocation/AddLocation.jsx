@@ -29,13 +29,21 @@ export default function AddLocationForm({
     function handleSubmit(e){
         e.preventDefault()
         handleAddLocation(state)
+        setState({
+            name: "",
+            street: "",
+            city: "",
+            state: "",
+            latitude: "",
+            longitude: ""
+        });
     }
 
     if (!form) {
         return(
             <Grid textAlign='center' verticalAlign='middle'>
                 <Grid.Column style={{ maxWidth: 450 }}>
-                    <Segment onClick={toggleForm} style={{cursor: 'pointer'}}>
+                    <Segment inverted color='grey' onClick={toggleForm} style={{cursor: 'pointer'}}>
                         <h3>Add Location &nbsp;&nbsp;+</h3>
                     </Segment>
                 </Grid.Column>
@@ -46,7 +54,7 @@ export default function AddLocationForm({
     return (
         <Grid textAlign='center' verticalAlign='middle'>
         <Grid.Column style={{ maxWidth: 450 }}>
-            <Segment>
+            <Segment inverted color='grey'>
             
                 <Form autoComplete="off" onSubmit={handleSubmit}>
                 

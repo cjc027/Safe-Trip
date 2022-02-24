@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Header from "../../components/Header/Header";
 import AddLocation from "../../components/AddLocation/AddLocation";
+import LocationIndex from "../../components/LocationIndex/LocationIndex";
 import ErrorMessage from "../../components/ErrorMessage/ErrorMessage";
 import * as locationAPI from "../../utils/locationAPI";
 
@@ -22,7 +23,6 @@ export default function Index({ user, handleLogout }) {
       console.log(data, "<- response from server, in handleAddLocation")
       setLocations([...locations, data.location])
       setForm(false);
-
     } catch(err) {
       setError(err.message);
       console.log(err);
@@ -41,6 +41,7 @@ export default function Index({ user, handleLogout }) {
   }
 
   useEffect(() => {
+    setForm(false);
     getLocations();
   }, []);
 
@@ -55,11 +56,16 @@ export default function Index({ user, handleLogout }) {
       </Grid.Row>
       <Grid.Row>
         <Grid.Column textAlign="center" style={{ maxWidth: 450 }}>
-          <h2>Index Page</h2>
+          <h2>Saved Locations</h2>
         </Grid.Column>
       </Grid.Row>
       <Grid.Row>
         <Grid.Column textAlign="center" style={{ maxWidth: 450 }}>
+          <LocationIndex locations={locations} user={user} />
+        </Grid.Column>
+      </Grid.Row>
+      <Grid.Row>
+        <Grid.Column textAlign="center" style={{ maxWidth: 437 }}>
           <AddLocation user={user} form={form} handleAddLocation={handleAddLocation} toggleForm={toggleForm} />
         </Grid.Column>
       </Grid.Row>

@@ -27,7 +27,7 @@ function App() {
     return (
       <Routes>
         <Route path="/" element={<Index user={user} handleLogout={handleLogout} />} />
-        <Route path="/profile" element={<Profile user={user} handleLogout={handleLogout} />} />
+        <Route path="/:username" element={<Profile user={user} handleLogout={handleLogout} />} />
         <Route
           path="/login"
           element={<LoginPage handleSignUpOrLogin={handleSignUpOrLogin} />}
