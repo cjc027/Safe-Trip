@@ -3,9 +3,9 @@ import { Button, Form, Grid, Segment } from 'semantic-ui-react'
 
 export default function ContactEditForm({contact, handleUpdateContact}){
     const [state, setState] = useState({
-        fullName: contact.fullName,
-        email: contact.email,
-        phoneNumber: contact.phoneNumber
+        fullName: "",
+        email: "",
+        phoneNumber: ""
     })
 
     function handleChange(e){
@@ -20,13 +20,13 @@ export default function ContactEditForm({contact, handleUpdateContact}){
         handleUpdateContact(state, contact._id)
     }
 
-    // useEffect(() => {
-    //     setState({
-    //         fullName: contact.fullName,
-                // email: contact.email,
-                // phoneNumber: contact.phoneNumber
-    //     })
-    // }, [])
+    useEffect(() => {
+        setState({
+            fullName: contact.fullName,
+                email: contact.email,
+                phoneNumber: contact.phoneNumber
+        })
+    }, [contact])
 
     return (
         <Grid textAlign='center' verticalAlign='middle'>
