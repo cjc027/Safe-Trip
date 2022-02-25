@@ -7,6 +7,7 @@ import LoginPage from "../LoginPage/LoginPage";
 import Index from "../Index/Index";
 import Location from "../Location/Location";
 import Profile from "../Profile/Profile";
+import ContactEdit from "../ContactEdit/ContactEdit";
 import userService from "../../utils/userService";
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
         <Route path="/" element={<Index user={user} handleLogout={handleLogout} />} />
         <Route path="/:username" element={<Profile user={user} handleLogout={handleLogout} />} />
         <Route path="/:username/:locationId" element={<Location user={user} handleLogout={handleLogout} />} />
+        <Route path="/:contactId/edit" element={<ContactEdit user={user} handleLogout={handleLogout} />} />
         <Route
           path="/login"
           element={<LoginPage handleSignUpOrLogin={handleSignUpOrLogin} />}

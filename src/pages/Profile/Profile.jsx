@@ -4,10 +4,9 @@ import Header from "../../components/Header/Header";
 import ErrorMessage from "../../components/ErrorMessage/ErrorMessage";
 import ContactIndex from "../../components/ContactIndex/ContactIndex";
 import AddContact from "../../components/AddContact/AddContact";
-import { Card } from "semantic-ui-react";
+import { Card, Grid } from "semantic-ui-react";
 import * as contactAPI from "../../utils/contactAPI";
 
-import { Grid } from "semantic-ui-react";
 import userService from "../../utils/userService";
 
 export default function Profile(props) {
@@ -104,7 +103,7 @@ export default function Profile(props) {
       </Grid.Row>
       <Grid.Row>
         <Grid.Column textAlign="center" style={{ maxWidth: 450 }}>
-          <ContactIndex contacts={contacts} user={user} />
+          <ContactIndex isProfile={true} contacts={contacts} user={user} />
         </Grid.Column>
       </Grid.Row>
       <Grid.Row>

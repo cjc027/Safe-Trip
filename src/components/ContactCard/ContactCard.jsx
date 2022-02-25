@@ -2,22 +2,19 @@ import React from "react";
 import { Card, Button, Segment, Grid, Icon, Header } from "semantic-ui-react";
 import { Link } from "react-router-dom";
 
-function ContactCard({ contact, user }) {
-  const cardStyle = {
-    // display:'grid',
-    // gridTemplateColumns: "1fr 1fr",
-    color: "inherit",
-    fontSize: "2rem",
-    paddingTop: "12px",
-  };
-
+function ContactCard({ contact, isProfile }) {
+  
   return (
     <Card key={contact._id} raised>
       <Card.Header as="h3" style={{ paddingTop: "10px" }}>
         {contact.fullName}
-        <Link style={{color: 'inherit'}} to="/">
-            <Icon name="edit" style={{paddingLeft: "20px"}}/>
-        </Link>
+        {isProfile ? (
+          <Link style={{color: 'inherit'}} to={`/${contact._id}/edit`}>
+              <Icon name="edit" style={{paddingLeft: "20px"}}/>
+          </Link>
+        ) : ( 
+          ""
+        )}
       </Card.Header>
       <Card.Content extra>
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr" }}>

@@ -98,7 +98,8 @@ export default function Location(props) {
       </Grid.Row>
       <Grid.Row>
         <Grid.Column textAlign="center" style={{ maxWidth: 450 }}>
-          <ContactIndex contacts={contacts} user={user} />
+          <br />
+          <ContactIndex isProfile={false} contacts={contacts} user={user} />
         </Grid.Column>
       </Grid.Row>
       <Grid.Row>
