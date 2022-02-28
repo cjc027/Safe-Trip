@@ -40,6 +40,10 @@ body {
   background-color: rgb(199, 212, 218);
 }
 
+/* .locationCard:hover {
+  color: #21ba45;
+} */
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

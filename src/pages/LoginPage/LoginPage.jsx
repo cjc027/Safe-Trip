@@ -8,7 +8,7 @@ import {
   Form,
   Grid,
   Header,
-  Image,
+  Icon,
   Message,
   Segment,
 } from "semantic-ui-react";
@@ -51,9 +51,10 @@ export default function LoginPage(props) {
         verticalAlign="middle"
       >
         <Grid.Column style={{ maxWidth: 450 }}>
-          <Header as="h2" color="blue" textAlign="center">
-            Log-in to your account
+          <Header as="h1" color="blue" textAlign="center">
+           Safe Trip <Icon name="car"/>
           </Header>
+          <br />
           <Form autoComplete="off" onSubmit={handleSubmit}>
             <Segment stacked>
               <Form.Input

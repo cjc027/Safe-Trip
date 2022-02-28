@@ -19,12 +19,12 @@ function ContactCard({ contact, isProfile }) {
       <Card.Content extra>
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr" }}>
           <a href={`tel:${contact.phoneNumber}`}>
-            <Button basic color="green" style={{ width: "95%" }}>
+            <Button basic color="blue" style={{ width: "95%" }}>
               Call
             </Button>
           </a>
           <a href={`mailto:${contact.email}`}>
-            <Button basic color="red" style={{ width: "95%" }}>
+            <Button basic color="green" style={{ width: "95%" }}>
               Email
             </Button>
           </a>

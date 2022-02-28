@@ -14,6 +14,7 @@ export default function Profile(props) {
   const [form, setForm] = useState(false);
   const [user, setUser] = useState({});
   const [error, setError] = useState("");
+  const [key, setKey] = useState("");
 
   const { username } = useParams();
 
@@ -47,16 +48,6 @@ export default function Profile(props) {
     }
   }
 
-  async function getContacts() {
-    try {
-      const data = await contactAPI.getAll();
-      console.log(data, "<- data from getContacts");
-      setContacts([...data.contacts]);
-    } catch (err) {
-      console.log(err.message, "<-getContacts error message");
-      setError(err.message);
-    }
-  }
 
   useEffect(() => {
     setForm(false);

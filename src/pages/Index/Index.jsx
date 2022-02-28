@@ -5,7 +5,7 @@ import LocationIndex from "../../components/LocationIndex/LocationIndex";
 import ErrorMessage from "../../components/ErrorMessage/ErrorMessage";
 import * as locationAPI from "../../utils/locationAPI";
 
-import { Grid } from "semantic-ui-react";
+import { Grid, Card } from "semantic-ui-react";
 import { useNavigate } from "react-router-dom";
 
 export default function Index({ user, handleLogout }) {
@@ -59,7 +59,11 @@ export default function Index({ user, handleLogout }) {
       </Grid.Row>
       <Grid.Row>
         <Grid.Column textAlign="center" style={{ maxWidth: 450 }}>
-          <h2>Saved Locations</h2>
+        <Card centered>
+            <Card.Content>
+              <h2>Saved Locations</h2>
+            </Card.Content>
+          </Card>
         </Grid.Column>
       </Grid.Row>
       <Grid.Row>

@@ -8,7 +8,7 @@ function LocationCard({location, user}){
 
         <Card as={Link} to={`/${user.username}/${location._id}`} key={location._id} raised>
             <Card.Content textAlign='center'>
-                <h3>{location.name}</h3>
+                <h3 className='locationCard' style={{color: '#51be6a'}}>{location.name}</h3>
             </Card.Content>
         </Card>
 
