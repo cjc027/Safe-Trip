@@ -37,12 +37,8 @@
 }
 
 body {
-  background-color: rgb(199, 212, 218);
+  background-color: #c7d4da;
 }
-
-/* .locationCard:hover {
-  color: #21ba45;
-} */
 
 @keyframes App-logo-spin {
   from {

@@ -17,10 +17,15 @@ export default function Location(props) {
   const [contacts, setContacts] = useState([]);
   const [user, setUser] = useState({});
   const [error, setError] = useState("");
+  const [toggle, setToggle] = useState(false);
 
   const { username, locationId } = useParams();
 
   const navigate = useNavigate();
+
+  function toggleDelete(){
+    setToggle(true);
+  }
 
   async function getProfile() {
     try {
@@ -49,6 +54,7 @@ export default function Location(props) {
     try {
       const data = await locationAPI.deleteOne(locationId);
       console.log(data, "deleted location")
+      toggleDelete(false);
       navigate('/');
     } catch(err) {
       console.log(err);
@@ -105,9 +111,15 @@ export default function Location(props) {
       <Grid.Row>
         <Grid.Column textAlign="center" style={{ maxWidth: 450 }}>
           <br />
-          <Button onClick={handleDelete} negative>
-            Delete Location
-          </Button>
+          {toggle ? (
+            <Button onClick={handleDelete} negative>
+              Confirm Delete
+            </Button>
+          ) : (
+            <Button onClick={toggleDelete} negative>
+              Delete Location
+            </Button>
+          )}
         </Grid.Column>
       </Grid.Row>
     </Grid>

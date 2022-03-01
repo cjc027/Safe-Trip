@@ -112,7 +112,7 @@ export default function SignUpPage(props) {
                 required
               />
             </Form.Field>
-            <Button type="submit" color='blue' className="btn">
+            <Button type="submit" fluid size="large" color='blue' className="btn">
               Signup
             </Button>
           </Segment>
