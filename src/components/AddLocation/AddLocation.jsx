@@ -42,7 +42,7 @@ export default function AddLocationForm({
     if (!form) {
         return(
             <Grid textAlign='center' verticalAlign='middle'>
-                <Grid.Column style={{ maxWidth: 450 }}>
+                <Grid.Column style={{ maxWidth: 425 }}>
                     <Segment inverted color='grey' onClick={toggleForm} style={{cursor: 'pointer'}}>
                         <h3>Add Location &nbsp;&nbsp;+</h3>
                     </Segment>
@@ -53,7 +53,7 @@ export default function AddLocationForm({
 
     return (
         <Grid textAlign='center' verticalAlign='middle'>
-        <Grid.Column style={{ maxWidth: 450 }}>
+        <Grid.Column style={{ maxWidth: 425 }}>
             <Segment inverted color='grey'>
             
                 <Form autoComplete="off" onSubmit={handleSubmit}>
