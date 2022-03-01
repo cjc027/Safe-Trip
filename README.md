@@ -4,7 +4,12 @@ _Safe Trip_ aims to be an accessible, mobile-oriented app that allows users to s
 
 ## Screenshots
 <p float="left">
-    Screenshots go here
+    <img src="https://raw.githubusercontent.com/cjc027/Safe-Trip/main/public/Screenshots/Login.png" width="45%" alt="Login page">
+    <img src="https://raw.githubusercontent.com/cjc027/Safe-Trip/main/public/Screenshots/LocationIndex.png" width="45%" alt="Saved locations index">
+</p>
+<p float="left">
+    <img src="https://raw.githubusercontent.com/cjc027/Safe-Trip/main/public/Screenshots/LocationDetails.png" width="45%" alt="Location details page">
+    <img src="https://raw.githubusercontent.com/cjc027/Safe-Trip/main/public/Screenshots/Profile.png" width="45%" alt="Profile page">
 </p>
 
 
