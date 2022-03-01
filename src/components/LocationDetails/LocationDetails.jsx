@@ -1,7 +1,7 @@
 import React from "react";
 import { Card, Button, Icon } from "semantic-ui-react";
 
-const MAPS_KEY = process.env.REACT_APP_GOOGLE_KEY
+// const MAPS_KEY = process.env.REACT_APP_GOOGLE_KEY
 // const TEST = process.env.REACT_APP_UBER_CLIENT
 
 function LocationDetails({ location }) {
@@ -18,7 +18,7 @@ function LocationDetails({ location }) {
       <Card.Content>
         <iframe
           
-          src={`https://www.google.com/maps/embed/v1/place?key=${MAPS_KEY}&q=${location.street},${location.city},${location.state}`}
+          src={`https://www.google.com/maps/embed/v1/place?key=AIzaSyA8JI1Ze8_s5CbKRvqg7ki3gwJSpxLA09A&q=${location.street},${location.city},${location.state}`}
           allowfullscreen
         />
       </Card.Content>
