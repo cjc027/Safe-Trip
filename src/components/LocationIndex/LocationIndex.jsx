@@ -1,11 +1,11 @@
 import React from "react";
-import { Card, Dimmer, Segment, Image } from "semantic-ui-react";
+import { Card } from "semantic-ui-react";
 import LocationCard from "../LocationCard/LocationCard";
-import { useNavigate, Link } from "react-router-dom";
+// import { useNavigate, Link } from "react-router-dom";
 
 export default function LocationIndex({ locations, user }) {
 
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   return (
     <Card.Group itemsPerRow={1} stackable>

@@ -14,7 +14,6 @@ export default function Profile(props) {
   const [form, setForm] = useState(false);
   const [user, setUser] = useState({});
   const [error, setError] = useState("");
-  const [key, setKey] = useState("");
 
   const { username } = useParams();
 

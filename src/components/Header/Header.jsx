@@ -1,8 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
-import { Header, Segment, Menu, Dropdown, Icon } from "semantic-ui-react";
-
-// const UBER = process.env.REACT_APP_UBER_CLIENT;
+import { Segment, Menu, Dropdown } from "semantic-ui-react";
 
 export default function PageHeader({ user, handleLogout }){
     console.log(user, '<- user in the header component')

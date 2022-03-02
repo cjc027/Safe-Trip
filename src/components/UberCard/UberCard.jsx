@@ -1,7 +1,5 @@
 import React from "react";
-import { Card, Button, Segment, Grid, Icon, Header } from "semantic-ui-react";
-import { Link } from "react-router-dom";
-import { format } from "morgan";
+import { Card, Button } from "semantic-ui-react";
 
 const UBER = process.env.REACT_APP_UBER_CLIENT;
 

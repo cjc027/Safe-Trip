@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, Dimmer, Segment, Image } from "semantic-ui-react";
+import { Card } from "semantic-ui-react";
 import ContactCard from "../ContactCard/ContactCard";
 
 export default function ContactIndex({ contacts, user, isProfile }){

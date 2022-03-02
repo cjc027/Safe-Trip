@@ -1,9 +1,5 @@
 import React from "react";
-import { Card, Button, Icon } from "semantic-ui-react";
-
-// const MAPS_KEY = process.env.REACT_APP_GOOGLE_KEY
-// const TEST = process.env.REACT_APP_UBER_CLIENT
-
+import { Card } from "semantic-ui-react";
 function LocationDetails({ location }) {
   return (
     <Card style={{minWidth: '350px'}} centered raised>
