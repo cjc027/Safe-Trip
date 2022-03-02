@@ -1,6 +1,9 @@
 import React from "react";
 import { Card } from "semantic-ui-react";
 function LocationDetails({ location }) {
+
+  const GOOGLE = process.env.REACT_APP_GOOGLE_KEY
+
   return (
     <Card style={{minWidth: '350px'}} centered raised>
       <Card.Header as="h3" style={{ paddingTop: "10px" }}>
@@ -14,7 +17,7 @@ function LocationDetails({ location }) {
       <Card.Content>
         <iframe
           
-          src={`https://www.google.com/maps/embed/v1/place?key=AIzaSyA8JI1Ze8_s5CbKRvqg7ki3gwJSpxLA09A&q=${location.street},${location.city},${location.state}`}
+          src={`https://www.google.com/maps/embed/v1/place?key=${GOOGLE}&q=${location.street},${location.city},${location.state}`}
           allowfullscreen
         />
       </Card.Content>
