@@ -67,7 +67,7 @@ export default function Index({ user, handleLogout }) {
         </Grid.Column>
       </Grid.Row>
       <Grid.Row>
-        <Grid.Column textAlign="center" style={{ maxWidth: 450 }}>
+        <Grid.Column textAlign="center" style={{ maxWidth: 437 }}>
           <LocationIndex locations={locations} user={user} />
         </Grid.Column>
       </Grid.Row>
